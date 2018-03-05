@@ -47,13 +47,16 @@ void perceptron_seq(float* &W, float &b, float *data, int count, int dimension, 
         {
             float predict = 0;
             float expected = data[i*dimension + dimension - 1];
+
+            //make prediction
             for(int j = 0; j < dimension - 1; j ++)
                 predict += W[j] * data[i*dimension +j] + b;
             
             //apply sign function
             if (predict < 0) predict = -1;
             else predict = 1;
-
+            
+            //batch the updates to the model
             if (predict != expected) 
             {
                 for(int j = 0; j < dimension - 1; j ++)
@@ -66,6 +69,7 @@ void perceptron_seq(float* &W, float &b, float *data, int count, int dimension, 
         //    break;
         //else
         //{
+        //apply updates to the model
             for(int j = 0; j < dimension - 1; j ++)
                 W[j] += update_w[j];
             b += update_b;
