@@ -14,6 +14,9 @@ deps	= $(wildcard ./*.hpp) \
 
 $(exe):$(objs)
 	$(cc) $(objs) $(flags) -o $(exe)
+	
+test:
+	./perceptron 20
 
 clean:
 	rm -rf *.o ${exe}
