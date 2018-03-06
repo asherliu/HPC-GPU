@@ -1,6 +1,7 @@
 exe=perceptron.bin
 
 cc="$(shell which g++)"
+cucc="$(shell which nvcc)"
 flags= -O3
 
 objs	= $(patsubst %.cpp,%.o,$(wildcard *.cpp))
@@ -10,10 +11,10 @@ deps	= $(wildcard ./*.hpp) \
 	  Makefile
 
 %.o:%.cpp $(deps)
-	$(cc) -c $(flags) $< -o $@
+	$(cucc) -c $(flags) $< -o $@
 
 $(exe):$(objs)
-	$(cc) $(objs) $(flags) -o $(exe)
+	$(cucc) $(objs) $(flags) -o $(exe)
 	
 test:$(exe)
 	./$(exe) 20
