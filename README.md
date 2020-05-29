@@ -1,8 +1,8 @@
-# EECE 7110: High-Performance Computing on GPUs @ UMass Lowell
+# EECE 7110: High-Performance Computing on GPUs
 ```
 Contact:
 Prof. Hang Liu 
-Hang_Liu@uml.edu
+asher.hangliu@gmail.com
 ```
 
 # Course syllabus
