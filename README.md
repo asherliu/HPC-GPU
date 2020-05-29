@@ -1,4 +1,4 @@
-# EECE 7110: High-Performance Computing on GPUs
+# High-Performance Computing on GPUs
 ```
 Contact:
 Prof. Hang Liu 
